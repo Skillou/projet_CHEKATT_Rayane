@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  serverUrl: "add url"
+  serverUrl: "https://api-project-skillou.vercel.app"
 };
