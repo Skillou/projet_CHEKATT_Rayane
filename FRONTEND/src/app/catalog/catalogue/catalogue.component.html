@@ -1,0 +1,33 @@
+<div class="container">
+  <h2>Catalogue produits :</h2>
+
+  <app-recherche-produits></app-recherche-produits>
+
+  <div *ngIf="!(service.produits$ | async)?.length">
+    <div class="produit-vide">
+      <img src="https://cdn-icons-png.flaticon.com/512/8259/8259243.png" alt="panierVide">
+      <p>Pas de produit trouvé</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12" *ngFor="let produit of service.produits$ | async">
+      <div class="card" style="width: 20rem;">
+        <img class="rounded center-block" [src]="produit.image" [alt]="produit.image">
+        <div>
+          <div class="card-footer text-muted text-sm-center">{{produit.description}}</div>
+          <div class="card-body">
+            <h5 class="card-title"><a [routerLink]="['/catalogue/product/', produit.id]">{{produit.name}}</a></h5>
+            <h6 class="card-subtitle mb-2 text-muted">
+              {{produit.category}}
+              <br>
+              <strong> Prix :</strong> {{produit.price}} €
+            </h6>
+            <br>
+            <button class="btn btn-success center-block" (click)="addProduct(produit)">Ajouter au panier</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

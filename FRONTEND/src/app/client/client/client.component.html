@@ -1,0 +1,35 @@
+<div class="container">
+  <h2> Liste des clients : </h2>
+  <div class="tableau">
+
+<!--    <div class="col-md-12" *ngFor="let client of clientService.client$ | async">-->
+
+    <table *ngIf="clients$ | async as clients">
+      <thead>
+        <tr>
+          <th>Login</th>
+
+          <th>Nom</th>
+
+          <th>Prénom</th>
+
+          <th>Info</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let client of clients">
+          <td>{{ client.login }}</td>
+          
+          <td>{{ client.lastName }}</td>
+          
+          <td>{{ client.firstName }}</td>
+          
+          <td>
+              <a [routerLink]="['/client/result', client.id]"><i class="fa-solid fa-circle-info"></i></a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+<div class="container">
+  <h2>Détails client :</h2>
+
+  <ul *ngIf="clientService.client$ | async as detailClient" class="list-group list-group-flush">
+    <li class="list-group-item">Civilité : {{detailClient.civility}}</li>
+    <li class="list-group-item">Prénom : {{detailClient.firstName}}</li>
+    <li class="list-group-item">Nom : {{detailClient.lastName}}</li>
+    <li class="list-group-item">Email : {{detailClient.email}}</li>
+    <li class="list-group-item">Téléphone : {{detailClient.telephone}}</li>
+    <li class="list-group-item">Rue : {{detailClient.street}}</li>
+    <li class="list-group-item">Ville : {{detailClient.city}}</li>
+    <li class="list-group-item">Code postal : {{detailClient.zipCode}}</li>
+    <li class="list-group-item">Login : {{detailClient.login}}</li>
+  </ul>
+</div>

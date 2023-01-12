@@ -1,0 +1,48 @@
+h1{
+  background: red;
+  color: red;
+}
+
+img {
+  width: 100%; /* Taille fixe pour toutes les images */
+  height: 100%; /* Taille fixe pour toutes les images */
+  object-fit: cover; /* Ajuste la taille de l'image pour qu'elle remplisse tout l'espace disponible */
+}
+
+.card {
+  width: 50rem; /* Taille fixe pour toutes les cartes */
+  height: 50rem; /* Taille fixe pour toutes les cartes */
+  margin-bottom: 2em;
+}
+
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col-md-12 {
+  flex: 1;
+  margin: 0 10px;
+}
+
+.produit-vide {
+  padding-top: 2rem;
+  margin: auto;
+  text-align: center;
+  display: block;
+}
+
+.produit-vide img {
+  width: 10em;
+  height: 10em;
+}
+
+.produit-vide p {
+font-size: large;
+}

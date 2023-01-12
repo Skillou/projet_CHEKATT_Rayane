@@ -1,0 +1,75 @@
+Product:
+    type: entity
+    table: product
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        civility:
+            type: string
+            nullable: false
+            length: 20
+            options:
+                fixed: false
+        first_name:
+            type: string
+            nullable: false
+            length: 33
+            options:
+                fixed: false
+        last_name:
+            type: string
+            nullable: false
+            length: 33
+            options:
+                fixed: false
+        email:
+            type: string
+            nullable: false
+            length: 40
+            options:
+                fixed: false
+        telephone:
+            type: string
+            nullable: false
+            length: 15
+            options:
+                fixed: false
+        street:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+        city:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+        zip_code:
+            type: string
+            nullable: false
+            length: 10
+            options:
+                fixed: false
+
+        login:
+            type: string
+            nullable: false
+            length: 15
+            options:
+                fixed: false
+        password:
+            type: string
+            nullable: false
+            length: 30
+            options:
+                fixed: false
+    lifecycleCallbacks: {  }
