@@ -46,3 +46,14 @@ img {
 .produit-vide p {
 font-size: large;
 }
+
+.fa-solid .fa-plus{
+  width: 2em;
+  width: 2em;
+}
+
+.btn__icon{
+  color: #2c3e50;
+  width: 2em;
+  height: 2em;
+}

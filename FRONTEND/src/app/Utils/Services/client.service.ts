@@ -15,6 +15,7 @@ export class ClientService {
     map(({ loggedIn }) => loggedIn),
     startWith(false)
   );
+
   
   constructor(private readonly httpClient: HttpClient) {
   }

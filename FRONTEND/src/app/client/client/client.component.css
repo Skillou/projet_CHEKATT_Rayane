@@ -27,3 +27,10 @@ table td {
   width: 2em;
   height: 2em;
 }
+
+.btn-add{
+  border-radius: 5rem;
+  background-color: #bdbaba;
+  border: none;
+  font-size: 1em;
+}

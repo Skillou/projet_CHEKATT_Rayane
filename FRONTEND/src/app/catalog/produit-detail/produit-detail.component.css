@@ -1,3 +1,8 @@
+.card{
+  border: 1px solid rgb(189, 189, 189);
+  border-radius: 10px
+}
+
 .hedding {
   font-size: 20px;
   color: #ab8181;
@@ -59,9 +64,4 @@
   color: #795eff;
   justify-content: center;
   align-items: center
-}
-
-.card {
-  border: none;
-  border-radius: 10px
 }

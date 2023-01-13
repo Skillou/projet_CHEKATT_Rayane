@@ -1,6 +1,6 @@
 <div class="container">
   <h1>Détail du produit</h1>
-  <div *ngIf="produit" class="col-lg-8 border p-3 main-section bg-white">
+  <div *ngIf="produit" class="card bg-white">
     <div class="row m-0">
       <div class="col-lg-4 left-side-product-box pb-3">
         <img src="{{produit.image}}" class="border p-3">
@@ -32,7 +32,7 @@
             <div class="col-lg-12 mt-3">
               <div class="row">
                 <div class="col-lg-6 pb-2">
-                  <a href="#" class="btn btn-success w-100">Ajouter au panier</a>
+                  <a class="btn btn-success w-100" (click)="addProduct(produit)">Ajouter au panier</a>
                 </div>
               </div>
             </div>

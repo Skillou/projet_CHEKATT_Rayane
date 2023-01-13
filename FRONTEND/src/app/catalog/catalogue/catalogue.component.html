@@ -10,6 +10,8 @@
     </div>
   </div>
 
+  <a [routerLink]="['/catalogue/add']"><i class="fa-solid fa-plus fa-xl btn__icon"></i></a>
+
   <div class="row">
     <div class="col-md-12" *ngFor="let produit of service.produits$ | async">
       <div class="card" style="width: 20rem;">

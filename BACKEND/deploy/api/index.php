@@ -89,23 +89,23 @@ $app->post('/api/login', function (Request $request, Response $response, $args) 
 // API Catalogue Produit //
 //////////////////////////
 
-$filename = './assets/mock/produits.json';
-$data = file_get_contents($filename);
-$array = json_decode($data);
+// $filename = './assets/mock/produits.json';
+// $data = file_get_contents($filename);
+// $array = json_decode($data);
 
-$app->get('/api/catalogue', function (Request $request, Response $response){
+// $app->get('/api/catalogue', function (Request $request, Response $response){
 
-    $clientRepository = $entityManager->getRepository('Products');
-    return $response;
-});
+//     $clientRepository = $entityManager->getRepository('Products');
+//     return $response;
+// });
 
-$app->get('/api/catalogue/{id}', function (Request $request, Response $response, $args) {
-    global $array;
-    $id = $args ['id'];
-    $array = $array[$id - 1];
-    $response->getBody()->write(json_encode ($array));
-    return $response;
-});
+// $app->get('/api/catalogue/{id}', function (Request $request, Response $response, $args) {
+//     global $array;
+//     $id = $args ['id'];
+//     $array = $array[$id - 1];
+//     $response->getBody()->write(json_encode ($array));
+//     return $response;
+// });
 
 //////////////////////////////////////////////////////////
 ///////////////////// SLIM PRODUCT ///////////////////////
@@ -305,7 +305,7 @@ $options = [
     "algorithm" => ["HS256"],
     "secret" => JWT_SECRET,
     "path" => ["/api"],
-    "ignore" => ["/api/hello","/api/login","/api/createUser", "/api/catalogue", "/api/products", "/api/clients"],
+    "ignore" => ["/api/hello","/api/login","/api/createUser", "/api/products", "/api/clients"],
     "error" => function ($response, $arguments) {
         $data = array('ERREUR' => 'Connexion', 'ERREUR' => 'Le token JWT est invalide');
         $response = $response->withStatus(401);
